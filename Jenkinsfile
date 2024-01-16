@@ -6,17 +6,11 @@ pipeline {
     stages{
         stage('build docker backend'){
             step {
+                echo 'build docker api'
                 sh 'cd api'
                 sh 'docker compose up --build'
             }
         }
-        stage('build doker client'){
-            step {
-             step {
-                sh 'cd ../client'
-                sh 'docker compose up --build'
-            }   
-            }
-        }
+       
     }
 }

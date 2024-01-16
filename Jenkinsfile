@@ -3,7 +3,7 @@ pipeline {
    
     stages{
         stage('build docker backend'){
-            step {
+            steps {
                 echo 'build docker api'
                 sh 'cd api'
                 sh 'npm run build'

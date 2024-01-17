@@ -1,6 +1,8 @@
 pipeline {
     agent any
-   
+   tools{
+       node "my-nodejs"
+   }
     stages{
         stage('build docker backend'){
             steps {

@@ -1,14 +1,14 @@
 pipeline {
     agent any
-   tools{
-       node "my-nodejs"
-   }
+    tools{
+        nodejs "my-nodejs"
+    }
     stages{
-        stage('build docker backend'){
+        stage('build app backend'){
             steps {
                 echo 'build docker api'
                 sh 'cd api'
-                sh 'node --version'
+                sh 'npm run build'
             }
         }
        

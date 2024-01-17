@@ -6,9 +6,10 @@ pipeline {
     stages{
         stage('build app backend'){
             steps {
-                echo 'build docker api'
-                sh 'cd api'
-                sh 'npm run build'
+                echo 'build app api'
+                sh 'cp ./api/example.env ./api/.env'
+                sh 'yarn --cwd ./api/ install'
+                sh 'yarn --cwd ./api/ run build'
             }
         }
        

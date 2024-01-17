@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'build docker api'
                 sh 'cd api'
-                sh 'npm run build'
+                sh 'node --version'
             }
         }
        

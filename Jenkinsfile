@@ -8,8 +8,8 @@ pipeline {
             steps {
                 echo 'build app api'
                 sh 'cp ./api/example.env ./api/.env'
-                sh 'yarn --cwd ./api/ install'
-                sh 'yarn --cwd ./api/ run build'
+                sh 'npm install --prefix ./api/'
+                sh 'npm run build --prefix ./api/'
             }
         }
        
